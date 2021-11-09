@@ -1,0 +1,47 @@
+.main {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 70px 18px;
+}
+
+.content__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid #DADADA;
+  padding-bottom: 25px;
+  margin-bottom: 60px;
+}
+
+.content__title-line_black {
+  border-bottom: 1px solid #000;
+  padding-bottom: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 90px 50px;
+  }
+
+  .content__title {
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .content {
+    padding: 110px 70px;
+  }
+
+  .content__title {
+    margin-bottom: 70px;
+  }
+}
