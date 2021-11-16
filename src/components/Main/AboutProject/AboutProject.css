@@ -1,31 +1,63 @@
-.project__description {
-  margin-bottom: 56px;
+.about {
+  padding-top: 110px;
+  color: #fff;
+  background-color: #202020
 }
 
-.project__description:last-of-type {
-  margin-bottom: 60px;
-}
-
-.project__title {
-  margin: 0;
-  font-weight: 400;
-  font-size: 18px;
+.about__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
   line-height: 1.22;
   letter-spacing: -0.04em;
-  margin-bottom: 16px;
+  width: 100%;
+  border-bottom: 1px solid #DADADA ;
+  text-align: left;
+  padding-bottom: 23px;
+  margin-bottom: 70px;
 }
 
-.project__text {
-  margin: 0;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 1.45;
+.about__diploma {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 110px;
+}
+
+.about__stages {
+  width: 50%;
+}
+
+.about__time {
+  width: 50%;
+}
+
+.about__chapter-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  text-align: left;
+  padding-right: 5%;
+}
+
+.about__chapter-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.42;
+  margin-top: 26px;
+  text-align: left;
+  box-sizing: border-box;
+  padding-right: 5%;
 }
 
 .project__duration {
   display: grid;
   grid-template-columns: minmax(100px, 1fr) 4fr;
   grid-template-rows: 35px 35px;
+  margin-bottom: 110px;
 }
 
 .project__line-time {
@@ -52,37 +84,44 @@
   color: #A0A0A0;
 }
 
-@media screen and (min-width: 768px) {
-  .project {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 93px;
+@media screen and (max-width: 400px) {
+  .about {
+    padding-top: 73px;
   }
 
-  .project__description{
-    margin: 0 40px 0 0;
-    flex-basis: 50%;
-  }
-  
-  .project__description:last-of-type{
-    margin: 0;
+  .about__diploma {
+    flex-direction: column;
+    margin-bottom: 60px;
   }
 
-  .project__title {
-    font-size: 20px;
-    line-height: 1.2;
-    margin-bottom: 22px;
+  .about__stages {
+    width: 100%;
   }
-  
-  .project__text {
-    font-size: 12px;
-    line-height: 1.4;
+
+  .about__time {
+    width: 100%;
+    margin-top: 56px;
+  }
+
+  .about__chapter-text {
+    padding-right: 0;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .about__title {
+    font-size: 18px;
+    margin-bottom: 60px;
+    padding-bottom: 25px;
+  }
+
+  .about__chapter-title {
+    font-size: 18px;
+    line-height: 1.22;
+    padding-right: 0;
+  }
+
+  .project__duration {
+    margin-bottom: 70px;
   }
 }
-
-@media screen and (min-width: 1280px) {
-  .project {
-    margin-bottom: 110px;
-  }
-}
-
