@@ -1,0 +1,127 @@
+.about {
+  padding-top: 110px;
+  color: #fff;
+  background-color: #202020
+}
+
+.about__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+  width: 100%;
+  border-bottom: 1px solid #DADADA ;
+  text-align: left;
+  padding-bottom: 23px;
+  margin-bottom: 70px;
+}
+
+.about__diploma {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 110px;
+}
+
+.about__stages {
+  width: 50%;
+}
+
+.about__time {
+  width: 50%;
+}
+
+.about__chapter-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  text-align: left;
+  padding-right: 5%;
+}
+
+.about__chapter-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.42;
+  margin-top: 26px;
+  text-align: left;
+  box-sizing: border-box;
+  padding-right: 5%;
+}
+
+.project__duration {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 4fr;
+  grid-template-rows: 35px 35px;
+  margin-bottom: 110px;
+}
+
+.project__line-time {
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__line-time_type_short {
+  background-color: #3DDC84;
+  color: #000;
+}
+
+.project__line-time_type_long {
+  background-color: #303030;
+  color: #FFF;
+}
+
+.project__part {
+  color: #A0A0A0;
+}
+
+@media screen and (max-width: 400px) {
+  .about {
+    padding-top: 73px;
+  }
+
+  .about__diploma {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .about__stages {
+    width: 100%;
+  }
+
+  .about__time {
+    width: 100%;
+    margin-top: 56px;
+  }
+
+  .about__chapter-text {
+    padding-right: 0;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .about__title {
+    font-size: 18px;
+    margin-bottom: 60px;
+    padding-bottom: 25px;
+  }
+
+  .about__chapter-title {
+    font-size: 18px;
+    line-height: 1.22;
+    padding-right: 0;
+  }
+
+  .project__duration {
+    margin-bottom: 70px;
+  }
+}
