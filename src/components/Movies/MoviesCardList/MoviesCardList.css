@@ -5,9 +5,35 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-gap: 32px 20px;
+  grid-gap: 32px 10px;
   justify-content: center;
   justify-items: center;
+}
+
+.movies-list__more-btn{
+  margin: 50px auto 80px;
+  background: #2F2F2F;
+  border-radius: 6px;
+  width: 320px;
+  height: 36px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  border: none;
+  color: #fff;
+}
+
+.movies-list__more-btn_hidden{
+  display: none;
+}
+
+.movies-list__more-btn:hover{
+  background-color: rgb(41, 41, 41);
+  color: #fff;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -21,4 +47,3 @@
     grid-gap: 20px 0;
   }
 }
-

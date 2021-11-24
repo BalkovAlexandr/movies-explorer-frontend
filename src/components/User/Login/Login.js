@@ -1,31 +1,20 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import AuthForm from '../AuthForm/AuthForm';
+import './Login.css';
+import Entrance from '../Entrance/Entrance';
 
-function Login(props) {
-  function handleSubmit(password, email) {
-    props.onLogin(password, email);
-  }
+function Login({ onLogin, infoMessage }){
 
   return (
-    <AuthForm
+    <Entrance
+      type='signin'
+      linkTo='signup'
       title='Рады видеть!'
-      button='Войти'
-      needUnderButton={true}
-      onSubmit={handleSubmit}
-      isClearInput={props.isClearInput}
-      isRegister={false}
-    >
-      <div className='auth-form__signin'>
-        <p>
-          Еще не зарегистрированы?
-          <NavLink to='/signup' className='auth-form__signin-link'>
-            Регистрация
-          </NavLink>
-        </p>
-      </div>
-    </AuthForm>
+      btnName='Войти'
+      subtitle='Ещё не зарегистрированы?'
+      linkName='Регистрация'
+      onSubmit={onLogin}
+      infoMessage={infoMessage}
+    />
   );
-}
-
+};
+ 
 export default Login;
