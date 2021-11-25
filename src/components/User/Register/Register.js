@@ -1,31 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import AuthForm from '../AuthForm/AuthForm';
+import './Register.css';
+import Entrance from '../Entrance/Entrance';
 
-function Register(props) {
-  function handleSubmit(name, password, email) {
-    props.onRegister(name, password, email);
-  }
+
+function Register({ onRegister, infoMessage }){
 
   return (
-    <AuthForm
+    <Entrance
+      type='signup'
+      linkTo='signin'
       title='Добро пожаловать!'
-      button='Зарегистрироваться'
-      needUnderButton={true}
-      onSubmit={handleSubmit}
-      isClearInput={props.isClearInput}
-      isRegister={true}
+      btnName='Зарегистрироваться'
+      subtitle='Уже зарегестрированы?'
+      linkName='Войти'
+      onSubmit={onRegister}
+      infoMessage={infoMessage}
     >
-      <div className='auth-form__signin'>
-        <p>
-          Уже зарегистрированы?
-          <Link to='/signin' className='auth-form__signin-link'>
-            Войти
-          </Link>
-        </p>
-      </div>
-    </AuthForm>
+    </Entrance>
   );
-}
-
+};
+  
 export default Register;

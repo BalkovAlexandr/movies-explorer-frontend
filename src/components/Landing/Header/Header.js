@@ -1,35 +1,23 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import logo from '../../../images/logo.svg';
-import MainMenu from '../MainMenu/MainMenu';
-import Wrapper from '../Wrapper/Wrapper';
 import './Header.css';
+import { Route } from 'react-router-dom';
+import Menu from '../../Menu/Menu';
+import Logo from '../Logo/Logo';
 
-function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  function handleClose() {
-    setIsOpen(false);
-  }
-  function handleOpen() {
-    setIsOpen(true);
-  }
+
+function Header({ loggedIn }) {
+
+  const endpoints = ['/movies', '/saved-movies', '/profile', '/'];
 
   return (
-    <>
-      <header className='header root__content'>
-        <NavLink to='/'>
-          <img src={logo} alt='Логотип' className='header__logo'></img>
-        </NavLink>
-        <MainMenu isWrapper={false} />
-        <button
-          type='button'
-          onClick={handleOpen}
-          className='header__menu-button'
-        />
+    <Route exact path={endpoints}> 
+      <header className='header root__section'>
+        <div className='header root__content'>
+          <Logo />
+          <Menu loggedIn={loggedIn}/>
+        </div>
       </header>
-      {isOpen && <Wrapper handleClose={handleClose} />}
-    </>
+    </Route>
   );
-}
-
+};
+  
 export default Header;

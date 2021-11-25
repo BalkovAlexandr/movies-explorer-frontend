@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutMe.css';
 import photo from '../../../images/my-photo.jpg';
 
@@ -16,10 +15,10 @@ function AboutMe() {
             в свободное время заниматься спортом. Сейчас работаю и учусь на Веб-разработчика.
             </p>
             <div className='about-me__social'>
-              <a className='about-me__about-link' target='_blank' rel='noreferrer' href='https://ru-ru.facebook.com/'>
+              <a className='about-me__about-link app__link' target='_blank' rel='noreferrer' href='https://ru-ru.facebook.com/'>
                 Facebook
               </a>
-              <a className='about-me__about-link' target='_blank' rel='noreferrer' href='https://github.com/BalkovAlexandr'>
+              <a className='about-me__about-link app__link' target='_blank' rel='noreferrer' href='https://github.com/BalkovAlexandr'>
                 Github
               </a>
             </div>
